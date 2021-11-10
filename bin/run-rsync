@@ -1,0 +1,3 @@
+external_drive=/media/josiah/external2tb
+rsync -az /media/Media/ ${external_drive}/Media
+rsync -az $HOME/Sync/ ${external_drive}/Sync

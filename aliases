@@ -1,0 +1,18 @@
+if [ "$(uname)" != "Darwin" ]; then
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+  alias fd="fdfind"
+else
+  alias pip=pip3
+fi
+
+
+alias em="emacsclient -nw"
+alias start-pg='sudo service postgresql start'
+alias start-em='emacs --daemon >& /dev/null'
+alias run-pg='sudo -u postgres psql'
+alias bb="bbedit"
+alias docker-ubuntu="docker run -it ubuntu bash"
+
+alias run-solargraph="solargraph socket"
+alias run-puml="docker run -d -p 8080:8080 plantuml/plantuml-server:jetty"

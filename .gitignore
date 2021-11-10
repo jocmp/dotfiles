@@ -1,0 +1,17 @@
+vim-config/backups/*
+vim-config/undodir/*
+vim-config/local.vim
+vim-config/plugged
+vim-config/local-plug.vim
+vim-config/autoload/plug.vim
+vim-config/undodir
+vim-config/backups
+vscode/
+bash.local
+emacs.d/saves/*
+emacs.d/elpa/*
+emacs.d/custom.el
+\#*\#
+*\~
+.DS_Store
+emacs.d/projectile-bookmarks.eld

@@ -1,0 +1,99 @@
+#!/bin/bash
+
+function tcp_port_in_use {
+	lsof -i TCP:$1
+}
+
+function yrm {
+  echo | rm $@
+}
+
+function rec_rm_ds_store {
+  find . -name '.DS_Store' -type f -delete
+}
+
+function mov_to_gif {
+  ffmpeg -i $1 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
+}
+
+function sd_dir {
+  echo "$HOME/GDrive/Writing/log"
+}
+
+function sd {
+  log_date=$(date +%Y-%m-%d)
+  filename="`sd_dir`/${log_date}_log.txt"
+
+  if [ ! -f $filename ]; then
+    echo "# ${log_date}" > $filename
+    echo "$filename created"
+    cat "`sd_dir`/template.txt" >> $filename
+  fi
+}
+
+function cl {
+  sd
+}
+
+function resize_down_50 {
+		jpegoptim $1 --strip-exif
+		convert $1 -resize 50% $1
+}
+
+function loop_rspec {
+  echo "Looping $1 10 times"
+  for i in {1..10}
+  do
+    echo "$i pass"
+    bundle exec rspec $1
+  done
+}
+
+function dir_stats {
+    # https://unix.stackexchange.com/questions/18506/recursive-statistics-on-file-types-in-directory
+    find . -type f -printf '%f\n' | sed -r -n 's/.+(\..*)$/\1/p' | sort | uniq -c
+}
+
+function verify_flac {
+  find -name "*.flac" -exec ffmpeg -i {} {}.wav \;
+  ls -Q *.flac.wav | xargs -L 1 lac | less
+  rm *.flac.wav
+}
+
+function flac_to_wav {
+		fd --extension 'flac' . -exec bash -c 'ffmpeg -y -i "{}" "${1%.*}.wav"' bash {} \;
+}
+
+function gnome_bg_color {
+  gsettings set org.gnome.desktop.background picture-uri none
+  gsettings set org.gnome.desktop.background primary-color '#038387'
+  gsettings set org.gnome.desktop.background color-shading-type 'solid'
+}
+
+function convert_gif_to_png {
+  convert *.gif[1] -set filename:base "%[basename]" "%[filename:base].png"
+}
+
+function rspec_on_change {
+  bin/rspec $(git ls-files --modified spec/)
+}
+
+
+# ========================== GIT ==============================
+function gp {
+		git log -S $1
+}
+
+function gr {
+		git rebase -i HEAD~$(git log --oneline "master..$(git branch --show-current)" | wc -l | sed 's/ //g')
+}
+
+function gu {
+		git reset --soft HEAD~1
+		echo "reset"
+}
+
+function kill_drop_shadow {
+    defaults write com.apple.screencapture disable-shadow -bool true
+		killall SystemUIServer
+}

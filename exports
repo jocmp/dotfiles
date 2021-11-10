@@ -1,0 +1,29 @@
+# enable colored output from ls, etc
+export CLICOLOR=1
+export LSCOLORS="Exfxcxdxbxegedabagacad"
+
+# load
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.nodenv/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:node_modules/.bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export EDITOR="emacs -nw"
+export CDPATH=".:$HOME/dev/"
+# export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
+# GO
+export PATH="$(go env GOPATH)/bin:$PATH"
+
+# prompt
+export PS1="[\h \w]\$(vcprompt -f '[%b%u%m]')$ "
+
+if [ "$(uname)" == "Darwin" ]; then
+  export ANDROID_HOME=$HOME/Library/Android/sdk
+  export CARGO_NET_GIT_FETCH_WITH_CLI=true
+else
+  export ANDROID_HOME=$HOME/Android/Sdk
+fi
+
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export GITHUB_USER=jocmp
