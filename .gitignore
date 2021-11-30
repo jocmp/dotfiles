@@ -8,6 +8,7 @@ vim-config/undodir
 vim-config/backups
 vscode/
 bash.local
+bash_local
 emacs.d/saves/*
 emacs.d/elpa/*
 emacs.d/custom.el
