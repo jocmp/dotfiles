@@ -1,22 +1,13 @@
 if [ -n "$BASH_VERSION" ]; then
-  # include .bashrc if it exists
   if [ -f "$HOME/.bashrc" ]; then
     . "$HOME/.bashrc"
   fi
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
 if [ "$(uname)" != "Darwin" ]; then
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+else
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 source ~/.aliases
@@ -49,5 +40,3 @@ fi
 
 [[ -f ~/.bash_local ]] && source ~/.bash_local
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

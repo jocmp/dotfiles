@@ -6,8 +6,7 @@ else
   alias pip=pip3
 fi
 
-
-alias em="emacsclient -nw"
+alias ec="emacsclient -nw"
 alias start-pg='sudo service postgresql start'
 alias start-em='emacs --daemon >& /dev/null'
 alias run-pg='sudo -u postgres psql'

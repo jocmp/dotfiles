@@ -8,6 +8,10 @@ function yrm {
   echo | rm $@
 }
 
+function em {
+    open -a /opt/homebrew/Cellar/emacs-plus@27/27.2/Emacs.app -- $@
+}
+
 function rec_rm_ds_store {
   find . -name '.DS_Store' -type f -delete
 }
