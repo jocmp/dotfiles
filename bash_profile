@@ -7,7 +7,7 @@ fi
 if [ "$(uname)" != "Darwin" ]; then
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 else
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+  [[ -f /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 source ~/.aliases
