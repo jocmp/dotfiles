@@ -15,7 +15,7 @@ export LSCOLORS="Exfxcxdxbxegedabagacad"
 
 # load
 export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.nodenv/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:node_modules/.bin:/usr/local/bin:/usr/local/sbin:$PATH"
-export EDITOR="emacs -nw"
+export EDITOR="emacsclient -nw"
 export CDPATH=".:$HOME/dev/"
 # export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
