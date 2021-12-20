@@ -8,8 +8,17 @@ function yrm {
   echo | rm $@
 }
 
+function get_cellar {
+	if [[ `uname -m` == 'arm64' ]]; then
+		echo "/opt/homebrew/Cellar"
+	else
+	  echo "/usr/local/Cellar"
+	fi
+}
+
+
 function em {
-    open -a /opt/homebrew/Cellar/emacs-plus@27/27.2/Emacs.app -- $@
+    open -a "`get_cellar`/emacs-plus@27/27.2/Emacs.app" -- $@
 }
 
 function rec_rm_ds_store {
