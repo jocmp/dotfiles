@@ -21,22 +21,23 @@ function mov_to_gif {
 }
 
 function sd_dir {
-  echo "$HOME/GDrive/Writing/log"
+  echo "$HOME/GDrive/Writing"
 }
 
 function sd {
   log_date=$(date +%Y-%m-%d)
-  filename="`sd_dir`/${log_date}_log.txt"
+  filename="`sd_dir`/$1/${log_date}_log.txt"
 
   if [ ! -f $filename ]; then
     echo "# ${log_date}" > $filename
     echo "$filename created"
-    cat "`sd_dir`/template.txt" >> $filename
+    cat "`sd_dir`/log_template.txt" >> $filename
   fi
 }
 
 function cl {
-  sd
+    sd "work"
+    sd "life"
 }
 
 function resize_down_50 {
