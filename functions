@@ -98,11 +98,6 @@ function gr {
 		git rebase -i HEAD~$(git log --oneline "master..$(git branch --show-current)" | wc -l | sed 's/ //g')
 }
 
-function gu {
-		git reset --soft HEAD~1
-		echo "reset"
-}
-
 function kill_drop_shadow {
     defaults write com.apple.screencapture disable-shadow -bool true
 		killall SystemUIServer

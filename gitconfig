@@ -1,10 +1,12 @@
 [alias]
+  adp = add -p
   co = checkout
   st = status
-  ci = commit
+  ci = commit -S
   pu = pull --rebase
   ps = push
   br = branch
+  gu = reset --soft HEAD~1
 [branch]
  sort = committerdate
 [color]
