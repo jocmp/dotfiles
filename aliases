@@ -8,7 +8,6 @@ fi
 
 alias ec="emacsclient -nw"
 alias start-pg='sudo service postgresql start'
-alias start-em='emacs --daemon >& /dev/null'
 alias run-pg='sudo -u postgres psql'
 alias bb="bbedit"
 alias docker-ubuntu="docker run -it ubuntu bash"

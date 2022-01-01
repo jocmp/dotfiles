@@ -17,10 +17,6 @@ function get_cellar {
 }
 
 
-function em {
-    open -a "`get_cellar`/emacs-plus@27/27.2/Emacs.app" -- $@
-}
-
 function rec_rm_ds_store {
   find . -name '.DS_Store' -type f -delete
 }
