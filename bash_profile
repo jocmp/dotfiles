@@ -39,3 +39,4 @@ fi
 
 [[ -f ~/.bash_local ]] && source ~/.bash_local
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
