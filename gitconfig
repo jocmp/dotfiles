@@ -2,12 +2,12 @@
   adp = add -p
   co = checkout
   st = status
-  ci = commit -S
+  ci = commit
   pu = pull --rebase
   ps = push
   br = branch
   gu = reset --soft HEAD~1
-  can = commit -S --amend --no-edit
+  can = commit --amend --no-edit
 [branch]
  sort = committerdate
 [color]
@@ -35,3 +35,7 @@
 	rebase = true
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2
