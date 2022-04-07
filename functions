@@ -102,3 +102,8 @@ function kill_drop_shadow {
     defaults write com.apple.screencapture disable-shadow -bool true
 		killall SystemUIServer
 }
+
+# fancy branch
+function gfb {
+    git checkout $(git branch --sort=-committerdate --format "%(refname:short)%(HEAD)" |  tr -d "*" | tr -d " " | fzf --preview="git show --color=always {}")
+}
