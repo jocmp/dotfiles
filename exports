@@ -35,6 +35,7 @@ if [ "$(uname)" == "Darwin" ]; then
   export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/Contents/Home
   export CARGO_NET_GIT_FETCH_WITH_CLI=true
 else
+  export GPG_TTY=$(tty)
   export ANDROID_HOME=$HOME/Android/Sdk
 fi
 
