@@ -31,7 +31,7 @@ function sd_dir {
 
 function sd {
   log_date=$(date +%Y-%m-%d)
-  filename="`sd_dir`/$1/${log_date}_log.txt"
+  filename="`sd_dir`/$1/${log_date}_log.md"
 
   if [ ! -f $filename ]; then
     echo "# ${log_date}" > $filename
