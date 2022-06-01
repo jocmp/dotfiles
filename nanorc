@@ -1,1 +1,2 @@
-include ~/.nano/syntax/ALL.nanorc
+set guidestripe 72
+include "~/.nano/syntax/*.nanorc"
