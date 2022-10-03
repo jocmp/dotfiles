@@ -26,7 +26,7 @@ function mov_to_gif {
 }
 
 function sd_dir {
-  echo "$HOME/GDrive/Writing"
+  echo "$HOME/gdrive/Writing"
 }
 
 function sd {
@@ -42,7 +42,6 @@ function sd {
 
 function cl {
     sd "work"
-    sd "life"
 }
 
 function resize_down_50 {
