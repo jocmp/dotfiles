@@ -2,17 +2,17 @@ if [ "$(uname)" != "Darwin" ]; then
   alias pbcopy='clip.exe'
   alias pbpaste="powershell.exe -command 'Get-Clipboard' | sed -e 's/\r\n$//g'"
   alias fd="fdfind"
-  alias ls="exa"
 else
   alias pip=pip3
 fi
 
+alias ls="exa"
 alias ec="emacsclient -nw"
 alias n="nano"
 alias start-pg='sudo service postgresql start'
 alias run-pg='sudo -u postgres psql'
-alias bb="bbedit"
 alias docker-ubuntu="docker run -it ubuntu bash"
+alias ms="mosh"
 
 alias run-solargraph="solargraph socket"
 alias run-puml="docker run -d -p 8080:8080 plantuml/plantuml-server:jetty"
