@@ -87,6 +87,18 @@ function rspec_on_change {
   bin/rspec $(git ls-files --modified spec/)
 }
 
+# ========================== JEST =============================
+
+function jest_loop {
+  while true;
+  do
+    npx jest $1
+  done
+}
+
+function jest_debug {
+  node --inspect-brk node_modules/.bin/jest --runInBand
+}
 
 # ========================== GIT ==============================
 function gp {
