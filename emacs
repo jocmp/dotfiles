@@ -32,7 +32,7 @@
 (setq-default indent-tabs-mode nil)
 
 ;; Display the distance between two tab stops as 4 characters wide.
-(setq-default tab-width 4)
+(setq-default tab-width 2)
 
 ;; Indentation setting for various languages.
 (setq c-basic-offset 4)
@@ -70,7 +70,7 @@
   (package-refresh-contents))
 
 ;; Install packages.
-(dolist (package '(markdown-mode paredit rainbow-delimiters))
+(dolist (package '(markdown-mode paredit rainbow-delimiters leuven-theme))
   (unless (package-installed-p package)
     (package-install package)))
 

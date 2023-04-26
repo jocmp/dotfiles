@@ -8,7 +8,7 @@ fi
 
 alias ls="exa"
 alias ec="emacsclient -nw"
-alias n="nano"
+alias n="em"
 alias start-pg='sudo service postgresql start'
 alias run-pg='sudo -u postgres psql'
 alias docker-ubuntu="docker run -it ubuntu bash"
