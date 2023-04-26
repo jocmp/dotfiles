@@ -1,4 +1,5 @@
-;;; Emfy 0.2.0-dev <https://github.com/susam/emfy>
+; -*-Lisp-*-
+;;; Emfy 0.3.0-dev <https://github.com/susam/emfy>
 
 ;; Customize user interface.
 (menu-bar-mode 0)
@@ -8,15 +9,7 @@
 (setq inhibit-startup-screen t)
 (column-number-mode)
 
-;; Theme.
-(load-theme 'leuven)
-;; (set-face-background 'default "#111")
-;; (set-face-background 'cursor "#c96")
-;; (set-face-background 'isearch "#c60")
-;; (set-face-foreground 'isearch "#eee")
-;; (set-face-background 'lazy-highlight "#960")
-;; (set-face-foreground 'lazy-highlight "#ccc")
-;; (set-face-foreground 'font-lock-comment-face "#fc0")
+(load-theme 'leuven t)
 
 ;; Interactively do things.
 (ido-mode 1)
@@ -28,6 +21,9 @@
 (setq-default show-trailing-whitespace t)
 (setq-default indicate-empty-lines t)
 (setq-default indicate-buffer-boundaries 'left)
+
+;; Add a newline automatically at the end of a file while saving.
+(setq-default require-final-newline t)
 
 ;; Consider a period followed by a single space to be end of sentence.
 (setq sentence-end-double-space nil)
