@@ -19,7 +19,7 @@
   status = auto
   branch = auto
 [core]
-	editor = em
+	editor = nano
   autocrlf = input
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [apply]
@@ -35,6 +35,7 @@
 [user]
 	name = Josiah Campbell
 	email = 9521010+jocmp@users.noreply.github.com
+	signingkey = /Users/jocmp/.ssh/id_ed25519_signing.pub
 [pull]
 	rebase = true
 [init]
@@ -42,7 +43,7 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = gpg2
+	format = ssh
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
