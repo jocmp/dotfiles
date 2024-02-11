@@ -7,13 +7,5 @@ else
 fi
 
 alias ls="exa"
-alias ec="emacsclient -nw"
-alias n="em"
-alias start-pg='sudo service postgresql start'
-alias run-pg='sudo -u postgres psql'
-alias docker-ubuntu="docker run -it ubuntu bash"
+alias n="nano"
 alias ms="mosh"
-alias reload-gpg="gpg-connect-agent reloadagent /bye"
-
-alias run-solargraph="solargraph socket"
-alias run-puml="docker run -d -p 8080:8080 plantuml/plantuml-server:jetty"
