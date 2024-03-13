@@ -23,7 +23,7 @@ export CDPATH=".:$HOME/dev/"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # prompt
-export PS1="[\h \w]\$(vcprompt -f '[%b%u%m]')$ "
+export PS1="[\w]\$(vcprompt -f '[%b%u%m]')$ "
 
 if [ "$(uname)" == "Darwin" ]; then
   export ANDROID_HOME=$HOME/Library/Android/sdk
