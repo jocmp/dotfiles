@@ -6,6 +6,6 @@ else
   alias pip=pip3
 fi
 
-alias ls="exa"
+alias ls="eza"
 alias n="nano"
 alias ms="mosh"

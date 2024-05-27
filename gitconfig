@@ -35,7 +35,7 @@
 [user]
 	name = Josiah Campbell
 	email = 9521010+jocmp@users.noreply.github.com
-	signingkey = /Users/jocmp/.ssh/id_ed25519_signing.pub
+	signingkey = ~/.ssh/id_ed25519_signing.pub
 [pull]
 	rebase = true
 [init]
