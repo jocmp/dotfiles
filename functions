@@ -109,9 +109,8 @@ function gr {
 		git rebase -i HEAD~$(git log --oneline "master..$(git branch --show-current)" | wc -l | sed 's/ //g')
 }
 
-function kill_drop_shadow {
-    defaults write com.apple.screencapture disable-shadow -bool true
-		killall SystemUIServer
+function nx-drop-shadow {
+    defaults write com.apple.screencapture disable-shadow true
 }
 
 # fancy branch
