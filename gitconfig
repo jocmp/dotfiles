@@ -19,33 +19,33 @@
   status = auto
   branch = auto
 [core]
-	editor = nano
+  editor = nano
   autocrlf = input
-	pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [apply]
   whitespace = nowarn
 [web]
   browser = open
 [include]
   path = ~/.gituser
-[url "git@github.com:"]
-	insteadOf = https://github.com/
 [pager]
   branch = cat
 [user]
-	name = Josiah Campbell
-	email = 9521010+jocmp@users.noreply.github.com
-	signingkey = ~/.ssh/id_ed25519_signing.pub
+  name = Josiah Campbell
+  email = 9521010+jocmp@users.noreply.github.com
+  signingkey = ~/.ssh/signing.pub
+[push]
+  autoSetupRemote = true
 [pull]
-	rebase = true
+  rebase = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [commit]
-	gpgsign = true
+  gpgsign = true
 [gpg]
-	format = ssh
+  format = ssh
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
