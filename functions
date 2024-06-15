@@ -8,6 +8,11 @@ function yrm {
   echo | rm $@
 }
 
+function migration-ts {
+	ruby -e 'puts Time.now.strftime("%Y%m%d%H%M%S")' | pbcopy
+	pbpaste
+}
+
 function get_cellar {
 	if [[ `uname -m` == 'arm64' ]]; then
 		echo "/opt/homebrew/Cellar"

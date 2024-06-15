@@ -1,8 +1,8 @@
 !tmp/cache/.keep
 **/.DS_Store
-*.DS_Store
-*.sw[nop]
 .DS_Store
+*.sw[nop]
+*.DS_Store
 .bundle
 .gemtags
 .tags
