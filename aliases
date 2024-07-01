@@ -9,5 +9,6 @@ fi
 
 alias ls="eza"
 alias n="nano"
+alias d="doom"
+alias m="emacs"
 alias ms="mosh"
-alias n="nano"
