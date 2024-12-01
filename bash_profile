@@ -14,15 +14,8 @@ source ~/.aliases
 source ~/.exports
 source ~/.functions
 
-eval "$(rbenv init -)"
-eval "$(nodenv init -)"
 eval "$(direnv hook bash)"
-eval "$(pyenv init -)"
 
-
-# `brew install bash-completion`
-
-export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
