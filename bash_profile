@@ -34,3 +34,7 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 . "$HOME/.cargo/env"
+
+. "/opt/homebrew/opt/asdf/libexec/asdf.sh"
+
+. "/opt/homebrew/opt/asdf/etc/bash_completion.d/asdf.bash"

@@ -1,5 +1,8 @@
 call plug#begin()
 
+" Theme
+Plug 'morhetz/gruvbox', { 'as': 'gruvbox' }
+
 " General
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-sensible'

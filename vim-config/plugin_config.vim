@@ -1,3 +1,7 @@
+" Theme
+color gruvbox
+set background=light
+
 " NERDTree:
 let NERDChristmasTree = 1
 let NERDTreeHighlightCursorline = 1
