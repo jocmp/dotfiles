@@ -35,6 +35,12 @@ fi
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 . "$HOME/.cargo/env"
 
-. "/opt/homebrew/opt/asdf/libexec/asdf.sh"
+. "${HOMEBREW_PREFIX}/opt/asdf/libexec/asdf.sh"
 
-. "/opt/homebrew/opt/asdf/etc/bash_completion.d/asdf.bash"
+if [ -f "${HOMEBREW_PREFIX}/opt/asdf/etc/bash_completion.d/asdf" ]; then
+  source "${HOMEBREW_PREFIX}/opt/asdf/etc/bash_completion.d/asdf"
+fi
+
+if [ -f "${HOMEBREW_PREFIX}/opt/asdf/etc/bash_completion.d/asdf.bash" ]; then
+  source "${HOMEBREW_PREFIX}/opt/asdf/etc/bash_completion.d/asdf.bash"
+fi

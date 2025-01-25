@@ -15,7 +15,7 @@ export LSCOLORS="Exfxcxdxbxegedabagacad"
 # load
 export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.nodenv/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:node_modules/.bin:/usr/local/bin:/usr/local/sbin:$HOME/.pyenv/shims:$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.config/emacs/bin:$PATH"
-export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
 export EDITOR="vim"
 export CDPATH=".:$HOME/dev/"
 

@@ -54,11 +54,9 @@ upgrade-env-managers: ## Upgrade env managers
 	-git -C ${NODENV_ROOT}/plugins/node-build pull
 	-git -C ${RBENV_ROOT}/plugins/ruby-build pull
 
-.PHONY: install-doom
-install-doom:
-	git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
-	~/.config/emacs/bin/doom install
-
+vim-install-nix:
+	mkdir -p ${HOME}/.config/nvim
+	ln -s vimrc ${HOME}/.config/nvim/init.vim
 
 .PHONY: help
 help:
