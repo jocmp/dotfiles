@@ -15,6 +15,8 @@ set wildmenu                               " Make tab completion act more like b
 set wildmode=longest,list,full             " Tab complete to longest common string, like bash
 set completeopt+=longest                   " Tab complete type to search
 set switchbuf=useopen                      " Don't re-open already opened buffers
+set visualbell
+set noerrorbells
 
 " Backups
 set backupdir=$HOME/.vim-config/backups

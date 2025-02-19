@@ -18,6 +18,7 @@ export PATH="$HOME/.config/emacs/bin:$PATH"
 export PATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
 export EDITOR="vim"
 export CDPATH=".:$HOME/dev/"
+export PATH="$HOME/.pyenv/bin:$PATH"
 
 # coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
