@@ -36,7 +36,10 @@ fi
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 . "$HOME/.cargo/env"
 
-. "${HOMEBREW_PREFIX}/opt/asdf/libexec/asdf.sh"
+
+if [ "$(uname)" == "Darwin" ]; then
+  . "${HOMEBREW_PREFIX}/opt/asdf/libexec/asdf.sh"
+fi
 
 if [ -f "${HOMEBREW_PREFIX}/opt/asdf/etc/bash_completion.d/asdf" ]; then
   source "${HOMEBREW_PREFIX}/opt/asdf/etc/bash_completion.d/asdf"

@@ -16,3 +16,4 @@ emacs.d/custom.el
 *\~
 .DS_Store
 emacs.d/projectile-bookmarks.eld
+config/go
