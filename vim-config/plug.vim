@@ -2,6 +2,7 @@ call plug#begin()
 
 " Theme
 Plug 'morhetz/gruvbox', { 'as': 'gruvbox' }
+Plug 'Mofiqul/vscode.nvim', { 'as' : 'vscode' }
 
 " General
 Plug 'editorconfig/editorconfig-vim'
@@ -9,19 +10,10 @@ Plug 'tpope/vim-sensible'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
-
-" Frontend
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'othree/html5.vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'leafgarland/typescript-vim'
-
-" Go
-Plug 'fatih/vim-go', {'for': 'go'}
+Plug 'telescope.nvim'
 
 " Ruby
 Plug 'thoughtbot/vim-rspec', {'for': 'ruby'}
