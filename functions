@@ -122,3 +122,24 @@ function nx-drop-shadow {
 function gfb {
     git checkout $(git branch --sort=-committerdate --format "%(refname:short)%(HEAD)" |  tr -d "*" | tr -d " " | fzf --preview="git show --color=always {}")
 }
+
+# ==== DOCKER
+docker::ssh() {
+  local container_id=$(docker ps | grep -v CONTAINER | fzf | cut -d ' ' -f1)
+  docker exec -it $container_id /bin/sh
+}
+
+docker::id() {
+  docker ps | grep -v CONTAINER | fzf | cut -d ' ' -f1 | pbcopy
+}
+
+docker::rm() {
+  local container_id=$(docker ps -a | grep -v CONTAINER | fzf | cut -d ' ' -f1)
+  docker stop $container_id
+  docker rm $container_id
+}
+
+docker::stop() {
+  local container_id=$(docker ps | grep -v CONTAINER | fzf | cut -d ' ' -f1)
+  docker stop $container_id
+}

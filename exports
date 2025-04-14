@@ -13,9 +13,10 @@ export CLICOLOR=1
 export LSCOLORS="Exfxcxdxbxegedabagacad"
 
 # load
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.nodenv/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:node_modules/.bin:/usr/local/bin:/usr/local/sbin:$HOME/.pyenv/shims:$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.nodenv/bin:node_modules/.bin:/usr/local/bin:/usr/local/sbin:$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 export EDITOR="vim"
 export CDPATH=".:$HOME/dev/"
 export PATH="$HOME/.pyenv/bin:$PATH"
@@ -41,3 +42,5 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export GITHUB_USER=jocmp
+export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
+export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"

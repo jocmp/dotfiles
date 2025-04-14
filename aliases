@@ -5,9 +5,11 @@ if [ "$(uname)" != "Darwin" ]; then
 fi
 
 alias pip="pip3"
+alias tilt=/opt/homebrew/bin/tilt
 
+alias vim="nvim"
 alias ls="eza"
-alias n="vim"
+alias n="nvim"
 alias d="doom"
 alias m="emacs"
 alias ms="mosh"

@@ -48,3 +48,6 @@ fi
 if [ -f "${HOMEBREW_PREFIX}/opt/asdf/etc/bash_completion.d/asdf.bash" ]; then
   source "${HOMEBREW_PREFIX}/opt/asdf/etc/bash_completion.d/asdf.bash"
 fi
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
