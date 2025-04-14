@@ -55,8 +55,8 @@ upgrade-env-managers: ## Upgrade env managers
 	-git -C ${RBENV_ROOT}/plugins/ruby-build pull
 
 vim-install-nix:
-	mkdir -p ${HOME}/.config/nvim
-	ln -s vimrc ${HOME}/.config/nvim/init.vim
+	mkdir -p ${HOME}/.config
+	ln -s ${HOME}/dev/dotfiles/nvim ${HOME}/.config/
 
 .PHONY: help
 help:
