@@ -6,14 +6,18 @@ Plug 'Mofiqul/vscode.nvim', { 'as' : 'vscode' }
 
 " General
 Plug 'editorconfig/editorconfig-vim'
-Plug 'tpope/vim-sensible'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
-" Plug 'scrooloose/nerdtree'
+Plug 'neovim/nvim-lspconfig'
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
-Plug 'telescope.nvim'
+
+Plug 'jparise/vim-graphql'
+
+" Search
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'ruifm/gitlinker.nvim'
 
 " Ruby
 Plug 'thoughtbot/vim-rspec', {'for': 'ruby'}
