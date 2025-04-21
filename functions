@@ -26,10 +26,6 @@ function rec_rm_ds_store {
   find . -name '.DS_Store' -type f -delete
 }
 
-function mov_to_gif {
-  ffmpeg -i $1 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
-}
-
 function sd_dir {
   echo "$HOME/gdrive/Writing"
 }
