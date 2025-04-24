@@ -25,6 +25,6 @@ Plug 'tpope/vim-endwise', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 
-source ~/.vim-config/local-plug.vim
+source ~/.config/nvim/local-plug.vim
 
 call plug#end()
