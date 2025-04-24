@@ -56,7 +56,7 @@ upgrade-env-managers: ## Upgrade env managers
 
 vim-install-nix:
 	mkdir -p ${HOME}/.config
-	ln -s ${HOME}/dev/dotfiles/nvim ${HOME}/.config/
+	ln -s ${HOME}/dev/dotfiles/vim-config ${HOME}/.config/nvim
 
 .PHONY: help
 help:
