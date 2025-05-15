@@ -139,3 +139,14 @@ docker::stop() {
   local container_id=$(docker ps | grep -v CONTAINER | fzf | cut -d ' ' -f1)
   docker stop $container_id
 }
+
+fsed() {
+  local search=$1
+  local replace=$2
+  local search_path=$3
+
+  test -z $1 && echo "request search regex" && return;
+  test -z $2 && echo "need replace" && return;
+
+  ag -l $search $search_path  | xargs -I {} sed -i'' "s#$search#$replace#g" {}
+}
