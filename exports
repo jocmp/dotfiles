@@ -45,3 +45,5 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export GITHUB_USER=jocmp
 export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
 export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"
+
+export GHOSTTY_SHELL_INTEGRATION_NO_CURSOR=1
