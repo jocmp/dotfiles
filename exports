@@ -48,3 +48,4 @@ export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
 export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"
 
 export GHOSTTY_SHELL_INTEGRATION_NO_CURSOR=1
+export BASH_SILENCE_DEPRECATION_WARNING=1

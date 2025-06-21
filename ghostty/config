@@ -40,7 +40,9 @@
 # # Some config options have unique syntaxes for their value,
 # # which is explained in the docs for that config option.
 # # Just for example:
-cursor-style = bar
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
 cursor-invert-fg-bg = true
 mouse-hide-while-typing = true
 font-family = Cascadia Code

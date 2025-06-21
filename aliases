@@ -10,6 +10,5 @@ alias tilt=/opt/homebrew/bin/tilt
 alias vim="nvim"
 alias ls="eza"
 alias n="nvim"
-alias d="doom"
 alias ms="mosh"
 alias sed="gsed"
