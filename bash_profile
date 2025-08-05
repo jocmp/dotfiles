@@ -1,8 +1,5 @@
-if [ -n "$BASH_VERSION" ]; then
-  if [ -f "$HOME/.bashrc" ]; then
-    . "$HOME/.bashrc"
-  fi
-fi
+export BASH_SILENCE_DEPRECATION_WARNING=1
+export PATH="$HOME/.cargo/bin:$PATH"
 
 if [ "$(uname)" != "Darwin" ]; then
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -51,3 +48,16 @@ fi
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/jocmp/.lmstudio/bin"
+# End of LM Studio CLI section
+
+eval "$(~/.local/bin/mise activate bash)"
+# eval "$(nodenv init - bash)"
+
+
+# Bracketed paste
+printf '\e[?2004l'
+
+eval "$(zellij setup --generate-auto-start bash)"
