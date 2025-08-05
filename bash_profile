@@ -1,5 +1,8 @@
-export BASH_SILENCE_DEPRECATION_WARNING=1
-export PATH="$HOME/.cargo/bin:$PATH"
+if [[ -z "$ZELLIJ_SESSION_NAME" ]]; then
+  export BASH_SILENCE_DEPRECATION_WARNING=1
+  export PATH="$HOME/.cargo/bin:$PATH"
+  eval "$(zellij setup --generate-auto-start bash)"
+fi
 
 if [ "$(uname)" != "Darwin" ]; then
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -59,5 +62,3 @@ eval "$(~/.local/bin/mise activate bash)"
 
 # Bracketed paste
 printf '\e[?2004l'
-
-eval "$(zellij setup --generate-auto-start bash)"
