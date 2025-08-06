@@ -3,6 +3,7 @@ call plug#begin()
 " Theme
 Plug 'morhetz/gruvbox', { 'as': 'gruvbox' }
 Plug 'Mofiqul/vscode.nvim', { 'as' : 'vscode' }
+Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 
 " General
 Plug 'editorconfig/editorconfig-vim'

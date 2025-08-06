@@ -46,6 +46,6 @@ shell-integration-features = no-cursor
 cursor-invert-fg-bg = true
 mouse-hide-while-typing = true
 font-family = Cascadia Code
-theme = dark:catppuccin-frappe,light:farmhouse-light
+theme = dark:catppuccin-frappe,light:piatto-light
 
 resize-overlay-duration = 4s 200ms
