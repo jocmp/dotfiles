@@ -3,7 +3,7 @@
 # This template file has been automatically created at the following
 # path since Ghostty couldn't find any existing config files on your system:
 #
-#   /Users/jocmp/Library/Application Support/com.mitchellh.ghostty/config
+#   /home/jocmp/.config/ghostty/config
 #
 # The template does not set any default options, since Ghostty ships
 # with sensible defaults for all options. Users should only need to set
@@ -40,12 +40,39 @@
 # # Some config options have unique syntaxes for their value,
 # # which is explained in the docs for that config option.
 # # Just for example:
+# resize-overlay-duration = 4s 200ms
+background = EFEBD4
+foreground = 5C6A72
+cursor-color = BDC3AF
+selection-background = EAEDC8
+selection-foreground = 5C6A72
+
+palette = 0=#EFEBD4
+
+palette = 1=#F85552
+palette = 2=#8DA101
+palette = 3=#DFA000
+palette = 4=#8DA101
+palette = 5=#3A94C5
+palette = 6=#35A77C
+
+palette = 7=#DF69BA
+palette = 8=#FDF6E3
+
+palette = 9=#EAEDC8
+palette = 10=#F0F1D2
+palette = 11=#FAEDCD
+palette = 12=#E9F0E9
+palette = 13=#FBE3DA
+palette = 14=#35A77C
+
+palette = 15=#5C6A72
+
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
 cursor-invert-fg-bg = true
 mouse-hide-while-typing = true
-font-family = Cascadia Code
-theme = dark:catppuccin-frappe,light:piatto-light
+font-family = Cascadia Mono Nerd
 
 resize-overlay-duration = 4s 200ms
