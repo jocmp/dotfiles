@@ -30,14 +30,6 @@ fi
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 . "$HOME/.cargo/env"
 
-if [ "$(uname)" == "Darwin" ]; then
-  . "${HOMEBREW_PREFIX}/opt/asdf/libexec/asdf.sh"
-fi
-
-if [ -f "${HOMEBREW_PREFIX}/opt/asdf/etc/bash_completion.d/asdf" ]; then
-  source "${HOMEBREW_PREFIX}/opt/asdf/etc/bash_completion.d/asdf"
-fi
-
 if [ -f "${HOMEBREW_PREFIX}/opt/asdf/etc/bash_completion.d/asdf.bash" ]; then
   source "${HOMEBREW_PREFIX}/opt/asdf/etc/bash_completion.d/asdf.bash"
 fi
@@ -50,7 +42,3 @@ export PATH="$PATH:/Users/jocmp/.lmstudio/bin"
 # End of LM Studio CLI section
 
 eval "$(~/.local/bin/mise activate bash)"
-# eval "$(nodenv init - bash)"
-
-# Bracketed paste
-printf '\e[?2004l'

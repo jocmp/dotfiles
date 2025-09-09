@@ -15,7 +15,6 @@ export LSCOLORS="Exfxcxdxbxegedabagacad"
 # load
 export PATH="$HOME/bin:$HOME/.local/bin:node_modules/.bin:/usr/local/bin:/usr/local/sbin:$HOME/.cargo/bin:$PATH"
 export PATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 export EDITOR="nvim"
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export GOPATH="$HOME/go"
@@ -49,3 +48,7 @@ export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"
 
 export GHOSTTY_SHELL_INTEGRATION_NO_CURSOR=1
 export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
