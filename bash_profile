@@ -9,9 +9,6 @@ source ~/.exports
 source ~/.functions
 
 eval "$(direnv hook bash)"
-eval "$(pyenv init --path)"
-
-export PATH="$PYENV_ROOT/bin:$PATH"
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
