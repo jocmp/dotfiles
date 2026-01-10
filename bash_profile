@@ -39,3 +39,7 @@ export PATH="$PATH:/Users/jocmp/.lmstudio/bin"
 # End of LM Studio CLI section
 
 eval "$(~/.local/bin/mise activate bash)"
+
+if command -v zellij &> /dev/null && [ -z "$ZELLIJ" ]; then
+    exec zellij
+fi
