@@ -1,0 +1,4 @@
+Host work
+	HostName name-here
+	RequestTTY yes
+	RemoteCommand bash -lc 'zellij attach work -c'
