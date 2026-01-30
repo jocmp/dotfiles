@@ -1,15 +1,9 @@
 if [ "$(uname)" != "Darwin" ]; then
-  alias pbcopy='clip.exe'
-  alias pbpaste="powershell.exe -command 'Get-Clipboard' | sed -e 's/\r\n$//g'"
   alias fd="fdfind"
 fi
 
 alias pip="pip3"
-alias tilt=/opt/homebrew/bin/tilt
 
 alias vim="nvim"
 alias ls="eza"
 alias n="nvim"
-alias ms="mosh"
-alias sed="gsed"
-alias mm="mosh mintty"

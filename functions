@@ -1,5 +1,15 @@
 #!/bin/bash
 
+if [[ "$(uname)" == "Linux" ]]; then
+  function pbcopy {
+    tee /tmp/clipboard | printf '\033]52;c;%s\a' "$(base64 | tr -d '\n')"
+  }
+
+  function pbpaste {
+    cat /tmp/clipboard
+  }
+fi
+
 function tcp_port_in_use {
 	lsof -i TCP:$1
 }

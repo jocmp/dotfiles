@@ -22,7 +22,6 @@ if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
   . $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
 fi
 
-[[ -f ~/.bash_local ]] && source ~/.bash_local
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 . "$HOME/.cargo/env"
@@ -40,6 +39,12 @@ export PATH="$PATH:/Users/jocmp/.lmstudio/bin"
 
 eval "$(~/.local/bin/mise activate bash)"
 
-if command -v zellij &> /dev/null && [ -z "$ZELLIJ" ]; then
-    exec zellij
+if [ -n "$SSH_CONNECTION" ] || [ -n "$SSH_CLIENT" ]; then
+    export PS1="[\h:\w]\$(vcprompt -f '[%b%u%m]')$ "
 fi
+
+# Uncomment and pass to ~/.bash_local
+# if command -v zellij &> /dev/null && [ -z "$ZELLIJ" ] && [ -z "$VSCODE_INJECTION" ] && [ -t 0 ]; then
+#   exec zellij attach main -c
+# fi
+[[ -f ~/.bash_local ]] && source ~/.bash_local
