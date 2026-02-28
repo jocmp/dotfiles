@@ -7,11 +7,15 @@ VSCODE_PATH := ${HOME}/Library/Application\ Support/Code/User
 VSCODE_EXTENSIONS_FILE := vscode/extensions.txt
 
 .PHONY: update brew-install brew-bundle uninstall dotfiles git-user vscode-extensions save-vscode-extensions
-dotfiles: $(DOTFILES) ssh-config ## Links the the dotfiles in this directory to your $HOME, existing files will be ignored
+dotfiles: $(DOTFILES) ssh-config ghostty-config ## Links the the dotfiles in this directory to your $HOME, existing files will be ignored
 
 ssh-config: ## Copy ssh_config to ~/.ssh/config
 	mkdir -p ${HOME}/.ssh
 	cp -n ${PWD}/ssh_config ${HOME}/.ssh/config
+ghostty-config: ## Hardlink ghostty config to ~/.config/ghostty
+	mkdir -p ${HOME}/.config/ghostty
+	ln -f ${PWD}/ghostty/config ${HOME}/.config/ghostty/config
+
 git-user: ${HOME}/.gituser ## Set up your git user config so your commits have your name and email on them
 install: dotfiles brew-install brew-bundle vim-install git-user vscode-extensions # all: $(DOTFILES) vim-install
 
