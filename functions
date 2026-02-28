@@ -175,3 +175,8 @@ function git-files() {
 function ios-better-demo() {
  xcrun simctl status_bar booted override --time "9:41" --dataNetwork "wifi" --wifiMode active --wifiBars 3 --cellularMode active --cellularBars 4 --batteryState charged --batteryLevel 100
 }
+
+function ff {
+	mosh jocmp@tower
+}
+
